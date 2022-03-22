@@ -1,0 +1,114 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<style>
+    #poz-R {
+        position: absolute;
+        right: 10px;
+    }
+
+    #nav-head {
+        padding: 20px;
+    }
+
+    .teste {
+        background-color: rgb(58, 57, 55);
+    }
+
+    .navbar-brand,
+    .nav-link {
+        color: azure
+    }
+    .main{background-color: rgba(199, 194, 194);}
+.main .col.doc{background-color: rgb(255, 255, 255);}
+.mid{text-align: center;height: 30px;color: azure;}
+#poz-L{position: relative;left: 0px;height: 800px;}
+ 
+</style>
+<nav id="nav-head" class="navbar navbar-expand-lg  teste ">
+    <a class="navbar-brand" href="#">Jessy Laupa</a>
+
+    <div class="collapse navbar-collapse" id="poz-R">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">Compétance</a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="#">Stage</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="veille.html">Veille Technonolgique</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<div class="main teste">
+    <div class="mid">presentation</div>
+    <div class="container-fluid">
+        <div class="row" id="poz-L">
+            <div class="col-2">
+                <strong>BTS-sio</strong>
+<img src="./leonard.jpeg" class="img-fluid" alt=" sa ne marche pas">
+<br><br><br>
+<div>
+    <h4>Sommaire</h4>
+    <ul>
+        <li>1 prestation <ul>
+                <li>1.1 moi </li>
+                <li>1.2 compétance</li>
+            </ul>
+        </li>
+        <li>2 stage<ul>
+                <li>1ere année</li>
+                <li>2eme année</li>
+            </ul>
+        </li>
+        <li>3 Veille Techno<ul>
+                <li>3.1</li>
+                <li>3.2</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div>
+    <br>language: <ul>
+        <li>PHP</li>
+        <li>java</li>
+        <li>js</li>
+    </ul>
+</div>
+
+            </div>
+            <div class="col doc">
+
+   <a id="refh" href="slt" >bonjour</a>
+
+                <embed id="emb" src="./stage.html" width="70%" height="100%">
+
+                     
+            </div>
+
+        </div>
+        <div class="mid ">end</div>
+    </div>
+</div>
+<script>
+    let op = window.location.href;
+    console.log("voila: " + op);
+    var opArray = op.split('?');
+	var fichier = opArray[1];
+function change(id, dr) { 
+    let k = document.getElementById(id);
+let kk=k.attributes[1];
+console.log("att: "+kk.value);
+kk.value=dr;
+console.log(k);
+}
+//change("emb","veille.html");
+</script>
