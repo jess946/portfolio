@@ -19,11 +19,26 @@
     .nav-link {
         color: azure
     }
-    .main{background-color: rgba(250, 250, 240);}
-.main .col.doc{background-color: rgb(255, 255, 255);}
-.mid{text-align: center;height: 30px;color: azure;}
-#poz-L{position: relative;left: 0px;height: 800px;}
- 
+
+    .main {
+        background-color: rgba(250, 250, 240);
+    }
+
+    .main .col.doc {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .mid {
+        text-align: center;
+        height: 30px;
+        color: azure;
+    }
+
+    #poz-L {
+        position: relative;
+        left: 0px;
+        height: 800px;
+    }
 </style>
 <nav id="nav-head" class="navbar navbar-expand-lg  teste ">
     <a class="navbar-brand" href="#">Jessy Laupa</a>
@@ -31,43 +46,56 @@
     <div class="collapse navbar-collapse" id="poz-R">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link"  onclick="change('emb', 'Home')">Home</a>
+                <a class="nav-link" onclick="change('emb', 'Home')">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link"  onclick="change('emb', 'Competance')">Competance</a>
+                <a class="nav-link" onclick="change('emb', 'Competance', '75%')">présantation</a>
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" href="#"  onclick="change('emb', 'stage')"> Stage</a>
+                <a class="nav-link" href="#" onclick="change('emb', 'stage')"> Stage</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link"  onclick="change('emb', 'info', '75%')">Veille Technonolgique</a>
+                <a class="nav-link" onclick="change('emb', 'info', '75%')">Veille Technonolgique</a>
             </li>
         </ul>
     </div>
 </nav>
 
 <div class="main teste">
-  <embed id="emb" src="res/Home.html" width="60%" height="100%">
-</div>  
+    <embed id="emb" src="res/Home.html" width="60%" height="100%">
+</div>
 
 <script>
- /*   let op = window.location.href;
-    console.log("voila: " + op);
-    var opArray = op.split('?');s
-	var fichier = opArray[1];*/
-function change(id, dr, size='') { 
-    let k = document.getElementById(id);
-let kk=k.attributes[1];
-if (size!=''){
-    k.setAttribute('width', size);
-    k.setAttribute('height', '85%');
-    console.log("fait")
-}//else #TODO
+    /*   let op = window.location.href;
+       console.log("voila: " + op);
+       var opArray = op.split('?');s
+       var fichier = opArray[1];*/
+    function change(id, dr, size = '') {
+        let k = document.getElementById(id);
+        let kk = k.attributes[1];
+        if (size == '') {
+            k.setAttribute('height', '1000%');
+            console.log('no chage size');
+            }
+          else
+          { 
+            k.setAttribute('width', size);
+            console.log("fait")
+            if (dr == "info") { k.setAttribute('height', '88%'); }
+            else {
+                k.setAttribute('height', '1000%')
+            }
+          
+        }
 
-console.log("att: "+kk.value);
-kk.value='res/'+dr+'.html';
+           
 
-}
-//change("emb","veille.html");
+        
+        
+               
+          
+        console.log("att: " + kk.value);
+        kk.value = 'res/' + dr + '.html';
+    }
 </script>

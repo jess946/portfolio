@@ -1,5 +1,5 @@
 <style>
-    .it{width: 1000px;   border: 1px solid black;margin-top: 20px;}
+    .it{width: 1000px;   border: 1px solid black; border-radius: 4px;margin-top: 20px;}
     .link, .guide{display: none;}
     .date{text-align: right;}
     .title{color: red;}
@@ -184,12 +184,7 @@
      <script>
     let link = document.getElementsByClassName('link');
     let ch = document.getElementsByClassName('title');
-    
     let l =link[0].innerHTML;
-    ch[0].setAttribute("href", l)
-
-  
+    ch[0].setAttribute("href", l)  
     console.log(l);
-
-
    </script>
