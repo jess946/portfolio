@@ -11,14 +11,15 @@
     }
 
     .teste {
-        background-color: rgb(58, 57, 55);
+        background-color: rgb(148, 157, 155);
+        text-align: center;
     }
 
     .navbar-brand,
     .nav-link {
         color: azure
     }
-    .main{background-color: rgba(199, 194, 194);}
+    .main{background-color: rgba(250, 250, 240);}
 .main .col.doc{background-color: rgb(255, 255, 255);}
 .mid{text-align: center;height: 30px;color: azure;}
 #poz-L{position: relative;left: 0px;height: 800px;}
@@ -30,87 +31,43 @@
     <div class="collapse navbar-collapse" id="poz-R">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link"  onclick="change('emb', '')">Home</a>
+                <a class="nav-link"  onclick="change('emb', 'Home')">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link">Compétance</a>
+                <a class="nav-link"  onclick="change('emb', 'Competance')">Competance</a>
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" href="#"  onclick="change('emb', 'stage.html')"> Stage</a>
+                <a class="nav-link" href="#"  onclick="change('emb', 'stage')"> Stage</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link"  onclick="change('emb', 'veille.html')">Veille Technonolgique</a>
+                <a class="nav-link"  onclick="change('emb', 'info', '75%')">Veille Technonolgique</a>
             </li>
         </ul>
     </div>
 </nav>
 
-
-
 <div class="main teste">
-    <div class="mid">presentation</div>
-    <div class="container-fluid">
-        <div class="row" id="poz-L">
-            <div class="col-2">
-                <strong>BTS-sio</strong>
-<img src="./leonard.jpeg" class="img-fluid" alt=" sa ne marche pas">
-<br><br><br>
+  <embed id="emb" src="res/Home.html" width="60%" height="100%">
+</div>  
 
-<div>
-    <h4>Sommaire</h4>
-    <ul>
-        <li>1 prestation <ul>
-                <li>1.1 moi </li>
-                <li>1.2 compétance</li>
-            </ul>
-        </li>
-        <li>2 stage<ul>
-                <li>1ere année</li>
-                <li>2eme année</li>
-            </ul>
-        </li>
-        <li>3 Veille Techno<ul>
-                <li>3.1</li>
-                <li>3.2</li>
-            </ul>
-        </li>
-    </ul>
-</div>
-<div>
-    <hr>
-    <br>language: <ul>
-        <li>PHP</li>
-        <li>java</li>
-        <li>js</li>
-    </ul>
-</div>
-
-            </div>
-            <div class="col doc">
-
-   <a id="refh">bonjour</a>
-
-                <embed id="emb" src="" width="70%" height="100%">
-
-                     
-            </div>
-
-        </div>
-        <div class="mid ">end</div>
-    </div>
-</div>
 <script>
-    let op = window.location.href;
+ /*   let op = window.location.href;
     console.log("voila: " + op);
-    var opArray = op.split('?');
-	var fichier = opArray[1];
-function change(id, dr) { 
+    var opArray = op.split('?');s
+	var fichier = opArray[1];*/
+function change(id, dr, size='') { 
     let k = document.getElementById(id);
 let kk=k.attributes[1];
+if (size!=''){
+    k.setAttribute('width', size);
+    k.setAttribute('height', '85%');
+    console.log("fait")
+}//else #TODO
+
 console.log("att: "+kk.value);
-kk.value=dr;
-console.log(k);
+kk.value='res/'+dr+'.html';
+
 }
 //change("emb","veille.html");
 </script>
