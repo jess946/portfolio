@@ -1,17 +1,14 @@
+<link href="../style/style.css" rel="stylesheet">
 <style>
-    .it{width: 1000px;   border: 1px solid black; border-radius: 4px;margin-top: 20px;}
-    .link, .guide{display: none;}
-    .date{text-align: right;}
-    .title{color: red;}
-
- </style>
   
+ </style>
+  <div id="inf">
    <div class="it">
-      <h3 clase="titre"><a class="title">
+      <h3 clase="titre"><a class="title" id="rzk">
     Ludovic Billiet, Toyota Europe : "Le segment A représente 100 000 voitures en France" 
      </a></h3 >
    <description>
-    <div><img src="https://journalauto.com/wp-content/uploads/2022/04/Toyota-Aygo-billiet.jpg" style="width: 100%;"><div>Avec le lancement de l'Aygo X, Toyota continue à croire dans le segment A alors que de nombreux constructeurs, français en tête, l'abandonnent. Ludovic Billiet, directeur de gamme A, B et voiture électrique chez Toyota Motor Europe, nous explique pourquoi.</div></div> 
+    <div><img id="zkr" src="https://journalauto.com/wp-content/uploads/2022/04/Toyota-Aygo-billiet.jpg" style="width: 100%;"><div>Avec le lancement de l'Aygo X, Toyota continue à croire dans le segment A alors que de nombreux constructeurs, français en tête, l'abandonnent. Ludovic Billiet, directeur de gamme A, B et voiture électrique chez Toyota Motor Europe, nous explique pourquoi.</div></div> 
    </description>
    <div class="link">https://journalauto.com/constructeurs/ludovic-billiet-toyota-europe-le-segment-a-represente-100-000-voitures-en-france/</div >
    <div class="guide"> isPermaLink="false">5c6d56a309e976d4ddb78743c87bebe5</div>
@@ -181,8 +178,11 @@
    <div class ="date" >Tue, 05 Apr 2022 00:00:00 GMT</div >
    <media:content medium="image" url="https://www.emploi-pro.fr/mediatheque_public/0/9/5/000349590.png"/>
    </div >
+   </div>
      <script>
     let link = document.getElementsByClassName('link');
+
+    let img = document.getElementsByTagName('img');
     let ch = document.getElementsByClassName('title');
     let l =link[0].innerHTML;
     ch[0].setAttribute("href", l)  

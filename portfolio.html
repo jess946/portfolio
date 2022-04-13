@@ -1,101 +1,114 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="style/style.css" rel="stylesheet">
+</head>
+<header>
+    <nav id="nav-head" class="navbar navbar-expand-lg  teste ">
+        <a class="navbar-brand" href="#">Jessy Laupa</a>
+        <div class="collapse navbar-collapse" id="poz-R">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" onclick="change('emb', 'Home')">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="change('emb', 'Competance', '75%')">présantation</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" href="#" onclick="change('emb', 'stage')"> Stage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="change('emb', 'info', '45%')">Veille Technonolgique</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
 <style>
-    #poz-R {
+    .te {
+        background-color: rgb(234, 241, 237), 194, 175;
         position: absolute;
-        right: 10px;
+        width: 100%;
+        height: 150px;
+        opacity: 30%;
     }
 
-    #nav-head {
-        padding: 20px;
+    .block {
+        text-align: left;
+        border-radius: 6px;
+        width: 300px;
+        height: 400px;
+        background-color: rgb(47, 92, 131);
+        position: absolute;
+        top: 150px;
+        left: 30px;
+        display: none;
     }
 
-    .teste {
-        background-color: rgb(148, 157, 155);
-        text-align: center;
+    #op2 {
+        top: 250px;
+        left: 430px;
     }
 
-    .navbar-brand,
-    .nav-link {
-        color: azure
-    }
-
-    .main {
-        background-color: rgba(250, 250, 240);
-    }
-
-    .main .col.doc {
-        background-color: rgb(255, 255, 255);
-    }
-
-    .mid {
-        text-align: center;
-        height: 30px;
-        color: azure;
-    }
-
-    #poz-L {
-        position: relative;
-        left: 0px;
-        height: 800px;
+    .bo {
+        opacity: 1;
     }
 </style>
-<nav id="nav-head" class="navbar navbar-expand-lg  teste ">
-    <a class="navbar-brand" href="#">Jessy Laupa</a>
+<script>
+</script>
 
-    <div class="collapse navbar-collapse" id="poz-R">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" onclick="change('emb', 'Home')">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" onclick="change('emb', 'Competance', '75%')">présantation</a>
-            </li>
+<body>
 
-            <li class="nav-item ">
-                <a class="nav-link" href="#" onclick="change('emb', 'stage')"> Stage</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" onclick="change('emb', 'info', '75%')">Veille Technonolgique</a>
-            </li>
-        </ul>
+    <div class="main teste">
+        <embed id="emb" src="res/Home.html" width="60%" height="100%">
+        <div class="block">quesque la veille technologie</div>
+        <div class="block" id="op2"> ma veille: </div>
     </div>
-</nav>
 
-<div class="main teste">
-    <embed id="emb" src="res/Home.html" width="60%" height="100%">
-</div>
+</body>
 
 <script>
     /*   let op = window.location.href;
        console.log("voila: " + op);
        var opArray = op.split('?');s
        var fichier = opArray[1];*/
+    function info(dr, k) {
+        let ep = document.getElementsByClassName("teste")[1];
+        let block = document.getElementsByClassName("block")[0];
+        let block1 = document.getElementsByClassName("block")[1];
+        if (dr == "info") {
+            k.setAttribute('height', '88%')
+            ep.setAttribute("id", "information")
+            block.style.display = 'block'
+            block1.style.display = 'block'
+
+        }
+        else {
+            ep.setAttribute("id", "")
+            k.setAttribute('height', '1000%')
+            block.style.display = "none"
+            block1.style.display = 'none'
+        }
+        console.log(block)
+    }
+
     function change(id, dr, size = '') {
         let k = document.getElementById(id);
         let kk = k.attributes[1];
         if (size == '') {
             k.setAttribute('height', '1000%');
             console.log('no chage size');
-            }
-          else
-          { 
-            k.setAttribute('width', size);
-            console.log("fait")
-            if (dr == "info") { k.setAttribute('height', '88%'); }
-            else {
-                k.setAttribute('height', '1000%')
-            }
-          
         }
-
-           
-
+        else {
+            k.setAttribute('width', size);
+            console.log("fait");
+        }
         
-        
-               
-          
         console.log("att: " + kk.value);
         kk.value = 'res/' + dr + '.html';
+        info(dr,k);
     }
+
+
 </script>
