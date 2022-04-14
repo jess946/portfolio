@@ -1,7 +1,7 @@
 /*main*/
 #poz-R {
     position: absolute;
-    right: 10px;
+    right: 30px;
 }
 
 #nav-head {
@@ -97,8 +97,25 @@
     grid-column-start: 3;
     grid-row-start: 3;
 }
+
 /*info*/
 .it{ width: 600px;   border: 1px solid black; border-radius: 4px;margin-top: 20px;background-color: rgb(220, 240, 217);}
     .link, .guide{display: none;}
     .date{text-align: right;}
     .title{color: red;}
+
+    /*stage*/
+    .choix-stage{display: flex;}
+
+   .stage-info{
+        background-color: rgba(178, 227, 202, 0.839); border-radius: 16px;
+        padding-top: 20px; margin-top: 50px;
+        text-align: center;
+    }
+   .stage2 .stage-info{background-color: rgba(132, 201, 196, 0.664);} 
+
+    @media only screen and (min-width: 1000px) {
+        #poz-R{right: 20px; flex:10px}
+        #jessy{opacity: none;}
+        
+    }

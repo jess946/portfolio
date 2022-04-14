@@ -5,10 +5,10 @@
 </head>
 <header>
     <nav id="nav-head" class="navbar navbar-expand-lg  teste ">
-        <a class="navbar-brand" href="#">Jessy Laupa</a>
+        <a class="navbar-brand" id="jessy" href="#">Jessy Laupa</a>
         <div class="collapse navbar-collapse" id="poz-R">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item ">
                     <a class="nav-link" onclick="change('emb', 'Home')">Home</a>
                 </li>
                 <li class="nav-item">
@@ -16,10 +16,10 @@
                 </li>
 
                 <li class="nav-item ">
-                    <a class="nav-link" href="#" onclick="change('emb', 'stage')"> Stage</a>
+                    <a class="nav-link" href="#" onclick="change('emb', 'stage', '65%')"> Stage</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="change('emb', 'info', '45%')">Veille Technonolgique</a>
+                    <a class="nav-link" onclick="change('emb', 'veille', '45%')">Veille Technonolgique</a>
                 </li>
             </ul>
         </div>
@@ -37,9 +37,9 @@
     .block {
         text-align: left;
         border-radius: 6px;
-        width: 300px;
-        height: 400px;
-        background-color: rgb(47, 92, 131);
+        width: 450px;
+        height: auto;
+        background-color: rgb(163, 186, 206);
         position: absolute;
         top: 150px;
         left: 30px;
@@ -62,8 +62,11 @@
 
     <div class="main teste">
         <embed id="emb" src="res/Home.html" width="60%" height="100%">
-        <div class="block">quesque la veille technologie</div>
-        <div class="block" id="op2"> ma veille: </div>
+        <div class="block"><strong>Quesque la méthode push d'une veille technoloque</strong>
+<p>La méthode push est une méthode d'utilisation d'Internet en très forte expansion. Elle consiste à apporter à l'utilisateur ou à «pousser» vers lui, de manière directe et automatique, l'information qu'il a programmée en fonction de critères qu'il a choisis.
+    Cela revient à sélectionner et utiliser judicieusement des outils de recherche d'information sur le Web tels des bases de données, des bulletins (Newsletters), des listes de diffusion, etc. qui envoient régulièrement des messages dans le courriel du veilleur. La méthode comprend plusieurs étapes.</p>
+        </div>
+        <div class="block" id="op2"> point essencielle de cette veille </div>
     </div>
 
 </body>
@@ -72,26 +75,16 @@
     /*   let op = window.location.href;
        console.log("voila: " + op);
        var opArray = op.split('?');s
-       var fichier = opArray[1];
-       
-       let aria={
-        txt: "",
-        id:[],
-        type:['php','java', 'html', 'python','symfony', 'angular', 'android','C', 'javascript', 'nodejs', 'git']
-    }
-    aria['texte']= "texte";
-    console.log(aria.txt ,aria.texte);
-    console.log(aria.id);
-       */
+       var fichier = opArray[1];*/
     function info(dr, k) {
         let ep = document.getElementsByClassName("teste")[1];
         let block = document.getElementsByClassName("block")[0];
         let block1 = document.getElementsByClassName("block")[1];
-        if (dr == "info") {
+        if (dr == "veille") {
             k.setAttribute('height', '88%')
             ep.setAttribute("id", "information")
             block.style.display = 'block'
-            block1.style.display = 'block'
+            block1.style.display = 'none'
 
         }
         else {
@@ -114,10 +107,10 @@
             k.setAttribute('width', size);
             console.log("fait");
         }
-        
+        info(dr,k);
         console.log("att: " + kk.value);
         kk.value = 'res/' + dr + '.html';
-        info(dr,k);
+        
     }
 
 
