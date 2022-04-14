@@ -37,11 +37,10 @@
 /*competance*/
 .gridMain {
     display: grid;
-    grid-template-columns: 100px, 100px, 100px, 100px;
-}
+   }
 
 .Gitem {
-    border: 1px solid black; border-radius: 3px; margin: 10px; 
+    border: 1px solid black; border-radius: 3px; margin: 10px; text-align: center;
 }
 
 #a1 {
